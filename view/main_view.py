@@ -115,9 +115,7 @@ class MainView(tk.Frame):
         mv_logger.debug('MainView._build_menu_bar')
 
         colors = ["red", "green", "blue", "yellow", "cyan", "magenta", "white", "black"]
-        fonts = ['8', '10', '12', '14', '16',
-                 '18', '20', '24', '26', '28',
-                 '36', '48']
+        fonts = [x for x in range(8,64) if x < 17 or not x % 2 and not x % 3]
 
         menubar = tk.Menu(self)
         dropdown_menu = tk.Menu(menubar, tearoff=0)
